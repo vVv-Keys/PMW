@@ -50,6 +50,18 @@ set priority=%2
 wmic process where "ProcessId=%pid%" CALL setpriority %priority%
 exit /b
 
+:: Function to suspend process
+:suspend_process
+set /p pid="Enter PID of the process to suspend: "
+taskkill /PID %pid% /S
+exit /b
+
+:: Function to resume process
+:resume_process
+set /p pid="Enter PID of the process to resume: "
+taskkill /PID %pid% /C
+exit /b
+
 :: Function for interactive mode
 :interactive_mode
 cls
@@ -65,7 +77,12 @@ echo "6. Configuration"
 echo "7. Adjust Process Priority"
 echo "8. Suspend Process"
 echo "9. Resume Process"
-echo "10. Exit"
+echo "10. Remote Process Management"
+echo "11. Integration with Task Scheduler"
+echo "12. Process Monitoring with Alerts"
+echo "13. Process Lifecycle Management"
+echo "14. GUI Interface"
+echo "15. Exit"
 echo.
 
 set /p choice="Enter action number: "
@@ -79,7 +96,12 @@ if "%choice%"=="6" goto configuration
 if "%choice%"=="7" goto adjust_priority
 if "%choice%"=="8" goto suspend_process
 if "%choice%"=="9" goto resume_process
-if "%choice%"=="10" exit /b
+if "%choice%"=="10" goto remote_process_management
+if "%choice%"=="11" goto task_scheduler_integration
+if "%choice%"=="12" goto process_monitoring
+if "%choice%"=="13" goto process_lifecycle_management
+if "%choice%"=="14" goto gui_interface
+if "%choice%"=="15" exit /b
 
 :error "Invalid choice. Please enter a valid action number."
 exit /b
@@ -107,16 +129,29 @@ exit /b
 echo "Functionality not available in Windows."
 exit /b
 
-:: Function to suspend process
-:suspend_process
-set /p pid="Enter PID of the process to suspend: "
-taskkill /PID %pid% /S
+:: Function to remote process management (Not available in Windows)
+:remote_process_management
+echo "Functionality not available in Windows."
 exit /b
 
-:: Function to resume process
-:resume_process
-set /p pid="Enter PID of the process to resume: "
-taskkill /PID %pid% /C
+:: Function to integrate with Task Scheduler (Not available in Windows)
+:task_scheduler_integration
+echo "Functionality not available in Windows."
+exit /b
+
+:: Function for process monitoring with alerts (Not available in Windows)
+:process_monitoring
+echo "Functionality not available in Windows."
+exit /b
+
+:: Function for process lifecycle management (Not available in Windows)
+:process_lifecycle_management
+echo "Functionality not available in Windows."
+exit /b
+
+:: Function for GUI interface (Not available in Windows)
+:gui_interface
+echo "Functionality not available in Windows."
 exit /b
 
 :: Main script starts here
@@ -135,6 +170,11 @@ if "%action%" == "notification" goto send_notification
 if "%action%" == "priority" goto adjust_process_priority
 if "%action%" == "suspend" goto suspend_process
 if "%action%" == "resume" goto resume_process
+if "%action%" == "remote" goto remote_process_management
+if "%action%" == "scheduler" goto task_scheduler_integration
+if "%action%" == "monitoring" goto process_monitoring
+if "%action%" == "lifecycle" goto process_lifecycle_management
+if "%action%" == "gui" goto gui_interface
 
 :error "Invalid action. Usage: %0 <action> [pid] [priority]"
 exit /b
