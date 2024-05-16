@@ -1,3 +1,18 @@
+
+```
+
+██ ▄█▀▓█████▓██   ██▓  ██████ 
+██▄█▒ ▓█   ▀ ▒██  ██▒▒██    ▒  
+▓███▄░ ▒███    ▒██ ██░░ ▓██▄   
+▓██ █▄ ▒▓█  ▄  ░ ▐██▓░  ▒   ██▒
+▒██▒ █▄░▒████▒ ░ ██▒▓░▒██████▒▒
+▒ ▒▒ ▓▒░░ ▒░ ░  ██▒▒▒ ▒ ▒▓▒ ▒ ░
+░ ░▒ ▒░ ░ ░  ░▓██ ░▒░ ░ ░▒  ░ ░
+░ ░░ ░    ░   ▒ ▒ ░░  ░  ░  ░  
+░  ░      ░  ░░ ░           ░  
+              ░ ░ 
+```
+
 # Windows Process Management Script
 
 This batch script provides various functionalities for managing and monitoring processes on Windows systems.
