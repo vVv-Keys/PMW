@@ -1,50 +1,63 @@
 # Windows Process Management Script
 
-This batch script provides a comprehensive set of tools for managing and monitoring processes on Windows systems. It allows users to perform various actions such as listing processes, viewing process details, filtering processes based on criteria, terminating processes, adjusting process priorities, suspending and resuming processes, and more.
+This batch script provides various functionalities for managing and monitoring processes on Windows systems.
 
-## Features
+## Features:
 
-- **List Processes**: View a list of running processes with their PIDs and names.
-- **View Process Details**: Display detailed information about a specific process.
-- **Filter Processes**: Filter processes based on criteria such as name, PID, or owner.
-- **Kill Process**: Terminate a specific process by providing its PID.
-- **Adjust Process Priority**: Change the priority of a process to influence its scheduling.
-- **Suspend Process**: Suspend the execution of a process.
-- **Resume Process**: Resume the execution of a suspended process.
-- **Interactive Mode**: Enter an interactive mode to perform actions from a menu.
-- **Configuration**: Configure settings and thresholds (Not available in Windows).
-- **Remote Process Management**: Manage processes on remote systems (Not available in Windows).
-- **Integration with Task Scheduler**: Schedule process management tasks using the Windows Task Scheduler (Not available in Windows).
-- **Process Monitoring with Alerts**: Basic process monitoring capabilities with alerts for abnormal behavior (Not available in Windows).
-- **Process Lifecycle Management**: Start, pause, and restart processes for complete lifecycle management (Not available in Windows).
-- **GUI Interface**: Graphical user interface for a more user-friendly experience (Not available in Windows).
+1. **List Processes**: Displays a list of running processes along with their CPU and memory usage.
 
+2. **View Process Details**: Allows viewing detailed information about a specific process.
 
-## Usage
+3. **Filter Processes**: Enables filtering processes based on criteria such as name, PID, or owner.
 
-### 1. **Clone the Repository**: Clone the repository to your local machine.
+4. **Kill Process**: Terminates a specified process.
 
-   ```batch
-   git clone https://github.com/your-username/process-management-script.git
-```
-### 2. **Navigate to the Script Directory:** Change into the directory of the cloned repository.
+5. **Adjust Process Priority**: Modifies the priority of a process.
 
-```
-cd process-management-script
-```
+6. **Suspend Process**: Suspends a running process.
 
-### 3.**Run the Script:** Execute the batch script with optional arguments for specific actions.
-```
-main.bat [action] [pid]
-```
+7. **Resume Process**: Resumes a suspended process.
 
-### **USAGE:** 
-``Replace [action] with one of the available actions (e.g., list, details, filter, kill, priority, suspend, resume) and [pid] with the PID of the target process (if required). Optionally, specify [priority] when adjusting process priority.```
+8. **Interactive Mode**: Provides an interactive menu for easy navigation of available actions.
 
-## Contributions
-Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request.
+9. **Error Handling**: Includes error handling to handle invalid input and errors gracefully.
 
-### License
-This project is licensed under the MIT License - see the LICENSE file for details.
+10. **Configuration**: Configure settings and thresholds (Not available in Windows).
+   
+11. **Remote Process Management**: Manage processes on remote systems (Not available in Windows).
 
+12. **Integration with Task Scheduler**: Schedule process management tasks using the Windows Task Scheduler (Not available in Windows).
 
+13. **Process Monitoring with Alerts**: Basic process monitoring capabilities with alerts for abnormal behavior (Not available in Windows).
+
+14. **Process Lifecycle Management**: Start, pause, and restart processes for complete lifecycle management (Not available in Windows).
+
+15. **GUI Interface**: Graphical user interface for a more user-friendly experience (Not available in Windows).
+
+## Usage:
+
+- Run the script without any arguments to enter interactive mode.
+- Specify action, PID, and optional priority as command-line arguments for direct execution.
+
+### Available Actions:
+
+- 1: List Processes
+- 2: View Process Details
+- 3: Filter Processes
+- 4: Kill Process
+- 5: Process Grouping (Not available)
+- 6: Configuration (Not available)
+- 7: Adjust Process Priority
+- 8: Suspend Process
+- 9: Resume Process
+- 10: Remote Process Management (Not available)
+- 11: Integration with Task Scheduler (Not available)
+- 12: Process Monitoring with Alerts (Not available)
+- 13: Process Lifecycle Management (Not available)
+- 14: GUI Interface (Not available)
+- 15: Exit
+
+## Notes:
+
+- Certain functionalities may not be available on all Windows systems.
+- Error handling is in place to guide users in case of invalid input or unavailable features.
