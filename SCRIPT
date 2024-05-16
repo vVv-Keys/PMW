@@ -63,7 +63,9 @@ echo "4. Kill Process"
 echo "5. Process Grouping"
 echo "6. Configuration"
 echo "7. Adjust Process Priority"
-echo "8. Exit"
+echo "8. Suspend Process"
+echo "9. Resume Process"
+echo "10. Exit"
 echo.
 
 set /p choice="Enter action number: "
@@ -75,7 +77,9 @@ if "%choice%"=="4" goto kill_process
 if "%choice%"=="5" goto process_grouping
 if "%choice%"=="6" goto configuration
 if "%choice%"=="7" goto adjust_priority
-if "%choice%"=="8" exit /b
+if "%choice%"=="8" goto suspend_process
+if "%choice%"=="9" goto resume_process
+if "%choice%"=="10" exit /b
 
 :error "Invalid choice. Please enter a valid action number."
 exit /b
@@ -103,10 +107,23 @@ exit /b
 echo "Functionality not available in Windows."
 exit /b
 
+:: Function to suspend process
+:suspend_process
+set /p pid="Enter PID of the process to suspend: "
+taskkill /PID %pid% /S
+exit /b
+
+:: Function to resume process
+:resume_process
+set /p pid="Enter PID of the process to resume: "
+taskkill /PID %pid% /C
+exit /b
+
 :: Main script starts here
 if "%~1" == "" goto interactive_mode
 set action=%~1
 set pid=%~2
+set priority=%~3
 
 if "%action%" == "list" goto list_processes
 if "%action%" == "details" goto view_process_details
@@ -116,6 +133,8 @@ if "%action%" == "log" goto log_process_activity
 if "%action%" == "restart" goto restart_process
 if "%action%" == "notification" goto send_notification
 if "%action%" == "priority" goto adjust_process_priority
+if "%action%" == "suspend" goto suspend_process
+if "%action%" == "resume" goto resume_process
 
 :error "Invalid action. Usage: %0 <action> [pid] [priority]"
 exit /b
