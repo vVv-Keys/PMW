@@ -76,3 +76,9 @@ This batch script provides a comprehensive set of tools for managing and monitor
 
 - Certain functionalities may not be available on all Windows systems.
 - Error handling is in place to guide users in case of invalid input or unavailable features.
+- (NOT AVAILABLE) Currently not implemented or being worked on because of bug issues or other random issues -- all features free soon.
+
+
+# CONTRIBUTIONS 
+
+- feel free to contribute or leave a like if you enjoyed this project or found it useful - thank you!
