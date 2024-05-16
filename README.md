@@ -13,12 +13,12 @@ This batch script provides a comprehensive set of tools for managing and monitor
 - **Resume Process**: Resume the execution of a suspended process.
 - **Interactive Mode**: Enter an interactive mode to perform actions from a menu.
 - **Configuration**: Configure settings and thresholds (Not available in Windows).
-- **Process Grouping**: Group related processes together for easier management (Not available in Windows).
-- **Process Monitoring with Alerts**: Basic process monitoring capabilities with alerts for abnormal behavior (Not available in Windows).
-- **Logging**: Log process-related activities to a log file for later analysis (Not available in Windows).
 - **Remote Process Management**: Manage processes on remote systems (Not available in Windows).
 - **Integration with Task Scheduler**: Schedule process management tasks using the Windows Task Scheduler (Not available in Windows).
+- **Process Monitoring with Alerts**: Basic process monitoring capabilities with alerts for abnormal behavior (Not available in Windows).
+- **Process Lifecycle Management**: Start, pause, and restart processes for complete lifecycle management (Not available in Windows).
 - **GUI Interface**: Graphical user interface for a more user-friendly experience (Not available in Windows).
+
 
 ## Usage
 
