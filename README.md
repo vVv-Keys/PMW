@@ -15,7 +15,7 @@
 
 # Windows Process Management Script
 
-This batch script provides various functionalities for managing and monitoring processes on Windows systems.
+This batch script provides a comprehensive set of tools for managing and monitoring processes on Windows systems. It allows users to perform various actions such as listing processes, viewing process details, filtering processes based on criteria, terminating processes, adjusting process priorities, suspending and resuming processes, and more.
 
 ## Features:
 
