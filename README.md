@@ -82,3 +82,16 @@ This batch script provides a comprehensive set of tools for managing and monitor
 # CONTRIBUTIONS 
 
 - feel free to contribute or leave a like if you enjoyed this project or found it useful - thank you!
+
+
+# FUTURE UPDATES: 
+
+Process Grouping (Not available)
+Configuration (Not available)
+Remote Process Management (Not available)
+Integration with Task Scheduler (Not available)
+Process Monitoring with Alerts (Not available)
+Process Lifecycle Management (Not available)
+GUI Interface (Not available)
+
+-----
