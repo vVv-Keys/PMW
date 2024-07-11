@@ -54,13 +54,13 @@ exit /b
 :: Function to suspend process
 :suspend_process
 set /p pid="Enter PID of the process to suspend: "
-taskkill /PID %pid% /S
+taskkill /PID %pid% /F
 exit /b
 
 :: Function to resume process
 :resume_process
 set /p pid="Enter PID of the process to resume: "
-taskkill /PID %pid% /C
+echo "Functionality not available in Windows."
 exit /b
 
 :: Function for interactive mode
@@ -89,12 +89,12 @@ echo.
 set /p choice="Enter action number: "
 
 if "%choice%"=="1" goto list_processes
-if "%choice%"=="2" goto view_process_details
+if "%choice%"=="2" set /p pid="Enter PID: " && goto view_process_details
 if "%choice%"=="3" goto filter_processes
 if "%choice%"=="4" goto kill_process
 if "%choice%"=="5" goto process_grouping
 if "%choice%"=="6" goto configuration
-if "%choice%"=="7" goto adjust_priority
+if "%choice%"=="7" set /p pid="Enter PID: " && set /p priority="Enter Priority: " && goto adjust_process_priority
 if "%choice%"=="8" goto suspend_process
 if "%choice%"=="9" goto resume_process
 if "%choice%"=="10" goto remote_process_management
@@ -104,8 +104,7 @@ if "%choice%"=="13" goto process_lifecycle_management
 if "%choice%"=="14" goto gui_interface
 if "%choice%"=="15" exit /b
 
-:error "Invalid choice. Please enter a valid action number."
-exit /b
+goto error "Invalid choice. Please enter a valid action number."
 
 :: Function to filter processes
 :filter_processes
@@ -177,5 +176,5 @@ if "%action%" == "monitoring" goto process_monitoring
 if "%action%" == "lifecycle" goto process_lifecycle_management
 if "%action%" == "gui" goto gui_interface
 
-:error "Invalid action. Usage: %0 <action> [pid] [priority]"
+goto error "Invalid action. Usage: %0 <action> [pid] [priority]"
 exit /b
